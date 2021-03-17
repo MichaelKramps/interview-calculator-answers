@@ -5,10 +5,9 @@ import './Keypad.css';
 import Key from '../Key/Key';
 import './Keypad.css';
 
-const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator, updateDisplay }) => {
+const Keypad = ({ operators, callOperator, numbers, setOperator, updateDisplay }) => {
   const numberKeys = numbers.map((number, iterator) => (
     <Key
-      handleKeyPress={handleKeyPress}
       key={`${number}${iterator}`}
       keyType="number-key"
       keyValue={number}
@@ -18,7 +17,6 @@ const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator,
 
   const operatorKeys = operators.map((operator, iterator) => (
     <Key
-      handleKeyPress={handleKeyPress}
       key={`${operator}${iterator}`}
       keyType="operator-key"
       keyValue={operator}
@@ -31,7 +29,7 @@ const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator,
       <div className="numbers-container">{numberKeys}</div>
       <div className="operators-container">{operatorKeys}</div>
       <div className="submit-container">
-        <Key handleKeyPress={handleKeyPress} keyType="submit-key" keyValue="=" keyAction={callOperator} />
+        <Key keyType="submit-key" keyValue="=" keyAction={callOperator} />
       </div>
     </div>
   );
@@ -39,7 +37,6 @@ const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator,
 
 Keypad.propTypes = {
   callOperator: PropTypes.func.isRequired,
-  handleKeyPress: PropTypes.func.isRequired,
   numbers: PropTypes.array.isRequired,
   operators: PropTypes.array.isRequired,
   setOperator: PropTypes.func.isRequired,

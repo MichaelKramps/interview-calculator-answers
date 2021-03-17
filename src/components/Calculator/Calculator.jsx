@@ -14,14 +14,6 @@ class Calculator extends Component {
     storedValue: '',
   };
 
-  componentWillMount = () => {
-    document.addEventListener('keydown', this.handleKeyPress);
-  };
-
-  componentWillUnmount = () => {
-    document.removeEventListener('keydown', this.handleKeyPress);
-  };
-
   callOperator = () => {
     let { displayValue, selectedOperator, storedValue } = this.state;
     const updateStoredValue = displayValue;
@@ -51,21 +43,6 @@ class Calculator extends Component {
     if (displayValue === 'NaN' || displayValue === 'Infinity') displayValue = '0';
 
     this.setState({ displayValue, selectedOperator, storedValue: updateStoredValue });
-  };
-
-  handleKeyPress = event => {
-    const { numbers, operators } = this.state;
-
-    if (event.key === 'Backspace') this.updateDisplay('ce');
-    if (event.key === 'Enter' || event.key === '=') this.callOperator();
-
-    numbers.forEach(number => {
-      if (event.key === number) this.updateDisplay(number);
-    });
-
-    operators.forEach(operator => {
-      if (event.key === operator) this.setOperator(operator);
-    });
   };
 
   setOperator = value => {
@@ -104,7 +81,6 @@ class Calculator extends Component {
       <div className="calculator-container">
         <Display displayValue={displayValue} />
         <Keypad
-          handleKeyPress={this.handleKeyPress}
           operators={operators}
           callOperator={this.callOperator}
           numbers={numbers}
