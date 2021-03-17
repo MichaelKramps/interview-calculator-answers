@@ -11,36 +11,36 @@
 }
 
 .operator-key {
-  background-color: var(--action-key-color);
+  background-color: #545454;
   width: 100%;
 }
 
 .operator-key:hover {
-  background-color: var(--action-key-color-hover);
+  background-color: #2a2a2a;
 }
 
 .number-key {
-  background-color: var(--number-key-color);
+  background-color: #696969;
   width: calc(100% / 3);
 }
 
 .number-key:hover {
-  background-color: var(--number-key-color-hover);
+  background-color: #3f3f3f;
 }
 
 .submit-key {
-  background-color: var(--submit-key-color);
+  background-color: #d18800;
   height: 100%;
   width: 100%;
 }
 
 .submit-key:hover {
-  background-color: var(--submit-key-color-hover);
+  background-color: #aa6e00;
 }
 
 .key-value {
-  color: var(--key-text-color);
-  font-family: var(--main-font);
-  font-size: var(--key-text-size);
-  font-weight: var(--key-text-weight);
+  color: #d3d3d3;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+  font-weight: 700;
 }

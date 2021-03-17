@@ -1,17 +1,17 @@
 .display-container {
   align-items: center;
-  background: var(--display-background-color);
+  background: #1d1f1f;
   display: flex;
-  height: var(--display-height);
+  height: 24%;
   padding: 0 4%;
-  width: var(--display-width);
+  width: 92%;
 }
 
 .display-value {
-  color: var(--display-text-color);
-  font-size: var(--display-text-size);
-  font-family: var(--main-font);
-  font-weight: var(--display-text-weight);
+  color: #23e000;
+  font-size: 4em;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
   margin-left: auto;
   overflow: hidden;
 }

@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: var(--keypad-height);
+  height: 72%;
   padding: 2%;
-  width: var(--keypad-width);
+  width: 96%;
 }
 
 .numbers-container {
