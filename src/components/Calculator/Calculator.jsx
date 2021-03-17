@@ -11,19 +11,19 @@ class Calculator extends Component {
     numbers: ['9', '8', '7', '6', '5', '4', '3', '2', '1', '.', '0', 'ce'],
     operators: ['/', 'x', '-', '+'],
     selectedOperator: '',
-    storedValue: '',
   };
 
   callOperator = () => {
-
   };
 
   setOperator = value => {
-
   };
 
   updateDisplay = value => {
+    let displayValue = this.state.displayValue == "0" ? "" : this.state.displayValue;
+    let newDisplayValue = displayValue + value;
 
+    this.setState({displayValue: newDisplayValue});
   };
 
   render() {
@@ -37,7 +37,7 @@ class Calculator extends Component {
           callOperator={this.callOperator}
           numbers={numbers}
           setOperator={this.setOperator}
-          updateDisplay={this.updateDisplay}
+          updateDisplay={() => {}}
         />
       </div>
     );
