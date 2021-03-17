@@ -5,13 +5,13 @@ import Calculator from "../components/Calculator/Calculator";
 
 
 describe("Calculator", () => {
-    it("Renders a div", () => {
+    it("Renders a 9", () => {
         render(<Calculator/>);
 
         expect(screen.queryByText("9")).toBeInTheDocument();
     })
 
-    it("Renders a div", () => {
+    it("inputs values to the result display", () => {
         render(<Calculator/>);
 
         fireEvent.click(screen.getByText("9"));
