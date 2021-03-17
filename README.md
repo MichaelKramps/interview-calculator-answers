@@ -8,8 +8,8 @@
 
 ## React Exercise
 
-1. Run application using <Calculator/> from answers folder to show off finished product
-2. Replace answers <Calculator /> with components <Calculator /> and run tests in Calculator.test.js
+1. Run application using Calculator from answers folder to show off finished product
+2. Replace answers/Calculator with components/Calculator and run tests in Calculator.test.js
 3. Uncomment one test at a time and allow the candidate to pass each test
 4. Begin the css prompts
 
