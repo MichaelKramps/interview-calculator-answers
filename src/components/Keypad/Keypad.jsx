@@ -25,7 +25,7 @@ const Keypad = ({ operators, callOperator, numbers, setOperator, updateDisplay }
   ));
 
   return (
-    <div className="keypad-container">
+    <div className="keypad-container" id="keypad-container">
       <div className="numbers-container">{numberKeys}</div>
       <div className="operators-container">{operatorKeys}</div>
       <div className="submit-container">
