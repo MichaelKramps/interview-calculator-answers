@@ -24,7 +24,6 @@ yarn-error.log*
 
 .gradle/*
 .idea/*
-README.md
 gradle/*
 gradlew
 gradlew.bat
