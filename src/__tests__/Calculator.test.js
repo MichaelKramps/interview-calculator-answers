@@ -14,6 +14,8 @@ describe("Calculator", () => {
 
     describe("can pass information to child components", () => {
         it("passes along the updateDisplay function", () => {
+            // Candidate will need to pass the updateDisplay function
+            // as a prop to the <Keypad /> component
             render(<Calculator/>);
 
             fireEvent.click(screen.getByText("9"));
@@ -25,6 +27,7 @@ describe("Calculator", () => {
 
     describe("can update state", () => {
         it("inputs decimals", () => {
+
             render(<Calculator/>);
 
             fireEvent.click(screen.getByText("9"));
@@ -61,6 +64,8 @@ describe("Calculator", () => {
         });
 
         it("clicking an operator adds to display", () => {
+            // operator <Key />'s are mapped differently
+            // they're passed the setOperator method instead of the updateDisplay method
             render(<Calculator/>);
 
             fireEvent.click(screen.getByText("9"));
@@ -73,6 +78,8 @@ describe("Calculator", () => {
         });
 
         it("performs the plus calculation and displays it", () => {
+            // equals sign is passed the callOperator method
+            // might start a discussion about the name of that method
             render(<Calculator/>);
 
             fireEvent.click(screen.getByText("9"));
