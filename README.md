@@ -6,6 +6,10 @@
 
 ### `npm test`
 
+## To search for answers
+
+Search the project for "end answer"
+
 ## React Exercise
 
 1. Run application using Calculator from answers folder to show off finished product

@@ -7,6 +7,12 @@
   width: 96%;
 }
 
+/* answer
+#keypad-container div {
+  background-color: #696969;
+}
+end answer */
+
 .numbers-container {
   display: flex;
   flex-direction: row;
@@ -14,6 +20,12 @@
   height: 80%;
   width: 75%;
 }
+
+/* answer */
+.numbers-container div:last-child {
+  background-color: blue;
+}
+/* end answer */
 
 .operators-container {
   display: flex;
